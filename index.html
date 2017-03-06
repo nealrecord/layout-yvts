@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <style>
+        * {
+            font-family: "Sansita";
+            box-sizing: border-box;
+        }
+        
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        .full-width {
+            width: 100%;
+        }
+        
+        .fixed-width {
+            width: 1200px;
+            margin: auto;
+        }
+        
+        .col-3 {
+            float: left;
+            width: 380px;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        .col-4 {
+            float: left;
+            width: 280px;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        nav {
+            height: 45px;
+            background-color: #000;
+        }
+        
+        nav .logo {
+            float: left;
+            color: aliceblue;
+            line-height: 45px;
+        }
+        
+        nav .menu {
+            float: right;
+        }
+        
+        nav .menu ul {
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav .menu li {
+            float: left;
+            list-style: none;
+        }
+        
+        nav .menu a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            line-height: 45px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 14px;
+            transition: all .5s
+        }
+        
+        nav .menu a:hover {
+            background-color: #ccc;
+        }
+        
+        header {
+            height: 750px;
+            background-image: url(images/5.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            display: table;
+        }
+        
+        header .overlay {
+            height: 750px;
+            background-color: rgba(0, 0, 0, 0.44);
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        header .content {
+            color: #fff;
+            margin: auto;
+            text-align: center;
+        }
+        
+        header .content h1 {
+            font-size: 120px;
+        }
+        
+        header .content a {
+            display: inline-block;
+            width: 160px;
+            color: #fff;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: #50d4d4;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        
+        #about {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            text-align: center;
+        }
+        
+        #about h2 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        #about .col-3 {
+            padding-top: 70px;
+        }
+        
+        #about .col-3 h3 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        
+        #about .col-3 p {
+            line-height: 2em;
+            opacity: .8;
+        }
+        
+        #works {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-color: #CCC;
+            color: #fff;
+            text-align: center;
+        }
+        
+        #works .col-3 {
+            height: 380px;
+            background-color: #629dc9;
+            padding-left: 0;
+        }
+        /*
+        #works h2 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+*/
+        
+        #works p {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        
+        #service {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            text-align: center;
+        }
+        
+        #service p {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        
+        #service .gallery {
+            overflow: hidden;
+            height: 280px;
+        }
+        
+        #service img {
+            width: 110%;
+        }
+        
+        #service .col-4 p {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            opacity: .8;
+        }
+        
+        #service .col-4 h4 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        #service .col-4 .social a {
+            text-decoration: none;
+            color: #000;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        footer {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            background-color: #333;
+            color: #eee;
+        }
+        footer a {
+            color: #eee;
+            text-decoration: none;
+            margin-left: 30px;
+        }
+        footer .copyrights{
+            float:left;
+        }
+        footer .sns {
+            float:right;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="full-width">
+        <div class="fixed-width">
+            <div class="logo">LOGO</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Works</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="full-width">
+        <div class="overlay">
+            <div class="content">
+                <h1>Design</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero eos aliquid perferendis fugit dicta.
+                    <br>consequatur vel, neque recusandae nihil et quam nostrum ullam deserunt cumque quas sint repellendus unde perspiciatis?</p>
+                <a href="#">GET STARTED</a>
+            </div>
+        </div>
+    </header>
+    <div id="about" class="full-width clearfix">
+        <div class="fixed-width">
+            <h2>About us</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quod, repellendus itaque alias quo laudantium culpa corporis! illum nisi repellendus doloremque. illum nisi repellendus doloremque.
+            </p>
+            <div class="col-3">
+                <div class="icon"><span class="fa fa-camera-retro fa-4x"></span></div>
+                <h3>HJKLJ</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. illum nisi repellendus doloremque. illum nisi repellendus doloremque.
+                </p>
+            </div>
+            <div class="col-3">
+                <div class="icon"><span class="fa fa-bolt fa-4x"></span></div>
+                <h3>HJKLJ</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. illum nisi repellendus doloremque. illum nisi repellendus doloremque.
+                </p>
+            </div>
+            <div class="col-3">
+                <div class="icon"><span class="fa fa-gavel fa-4x"></span></div>
+                <h3>HJKLJ</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. illum nisi repellendus doloremque. illum nisi repellendus doloremque.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="works" class="full-width clearfix">
+        <div class="fixed-width">
+            <h2>WORKS</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, sapiente ipsum provident cumque.
+            </p>
+            <div class="col-3">
+                <img src="images/marval1.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="images/Marvel2.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="images/marval3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="service" class="full-width clearfix">
+        <div class="fixed-width">
+            <h2>SERVICE</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, sapiente ipsum provident cumque.
+            </p>
+            <div class="col-4">
+                <div class="gallery"><img src="images/man1.jpg" alt=""></div>
+                <h4>Lkefjef Lmodf</h4>
+                <div>Gkdf Ddskf</div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. illum nisi repellendus doloremque. illum nisi repellendus doloremque.
+                </p>
+                <div class="social">
+                    <a href="#" class="fa fa-facebook fa-lg"></a>
+                    <a href="#" class="fa fa-instagram fa-lg"></a>
+                    <a href="#" class="fa fa-trello fa-lg"></a>
+                    <a href="#" class="fa fa-github fa-lg"></a>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="gallery"><img src="images/man2.jpg" alt=""></div>
+                <h4>Lkefjef Lmodf</h4>
+                <div>Gkdf Ddskf</div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. illum nisi repellendus doloremque. illum nisi repellendus doloremque.
+                </p>
+                <div class="social">
+                    <a href="#" class="fa fa-facebook fa-lg"></a>
+                    <a href="#" class="fa fa-instagram fa-lg"></a>
+                    <a href="#" class="fa fa-twitter fa-lg"></a>
+                    <a href="#" class="fa fa-github fa-lg"></a>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="gallery">
+                    <img src="images/woman1.jpg" alt="">
+                </div>
+                <h4>Lkefjef Lmodf</h4>
+                <div>Gkdf Ddskf</div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. illum nisi repellendus doloremque. illum nisi repellendus doloremque.
+                </p>
+                <div class="social">
+                    <a href="#" class="fa fa-facebook fa-lg"></a>
+                    <a href="#" class="fa fa-instagram fa-lg"></a>
+                    <a href="#" class="fa fa-twitter fa-lg"></a>
+                    <a href="#" class="fa fa-github fa-lg"></a>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="gallery"><img src="images/woman2.jpg" alt=""></div>
+                <h4>Lkefjef Lmodf</h4>
+                <div>Gkdf Ddskf</div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. illum nisi repellendus doloremque. illum nisi repellendus doloremque.
+                </p>
+                <div class="social">
+                    <a href="#" class="fa fa-facebook fa-lg"></a>
+                    <a href="#" class="fa fa-instagram fa-lg"></a>
+                    <a href="#" class="fa fa-twitter fa-lg"></a>
+                    <a href="#" class="fa fa-github fa-lg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <footer class="full-width">
+        <div class="fixed-width">
+            <div class="copyrights">
+                XXX DESIGN &copy; 2017
+            </div>
+            <div class="sns">
+                <a href="#" class="fa fa-facebook fa-lg"></a>
+                <a href="#" class="fa fa-instagram fa-lg"></a>
+                <a href="#" class="fa fa-twitter fa-lg"></a>
+                <a href="#" class="fa fa-github fa-lg"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
